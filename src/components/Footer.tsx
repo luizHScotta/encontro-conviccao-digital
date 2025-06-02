@@ -31,7 +31,7 @@ const Footer = () => {
           {/* Logo and Mission */}
           <div className="text-center md:text-left">
             <div className="flex items-center justify-center md:justify-start space-x-2 mb-4">
-              <div className="text-3xl animate-sparkle">🔥</div>
+              <div className="text-3xl">🔥</div>
               <span className="font-display font-bold text-2xl">
                 Jovens Marco
               </span>
