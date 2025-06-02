@@ -1,31 +1,18 @@
-
 import React from 'react';
-
 const HeroSection = () => {
-  return (
-    <section id="home" className="relative h-screen overflow-hidden">
+  return <section id="home" className="relative h-screen overflow-hidden">
       {/* Background Video */}
       <div className="absolute inset-0">
-        <video 
-          className="absolute inset-0 w-full h-full object-cover"
-          autoPlay
-          loop
-          muted
-          playsInline
-          poster="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1920&q=80"
-        >
+        <video className="absolute inset-0 w-full h-full object-cover" autoPlay loop muted playsInline poster="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1920&q=80">
           {/* Placeholder for video source - add your video file here */}
           <source src="" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         
         {/* Fallback Image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat" 
-          style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1920&q=80)'
-          }} 
-        />
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
+        backgroundImage: 'url(https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1920&q=80)'
+      }} />
       </div>
 
       {/* Gradient Overlay */}
@@ -46,19 +33,16 @@ const HeroSection = () => {
           {/* Event Details */}
           <div className="mb-8 space-y-2">
             <p className="text-[clamp(1.2rem,3vw,2rem)] font-body font-medium">
-              15-17 de Março, 2024
-            </p>
+          </p>
             <p className="text-[clamp(1rem,2.5vw,1.5rem)] font-body text-white/90">
-              Sítio Esperança, Campos do Jordão - SP
-            </p>
+          </p>
           </div>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button 
-              onClick={() => document.getElementById('sobre')?.scrollIntoView({ behavior: 'smooth' })}
-              className="px-8 py-4 border-2 border-white text-white font-body font-semibold text-lg rounded-full hover:bg-white hover:text-electric-purple transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
-            >
+            <button onClick={() => document.getElementById('sobre')?.scrollIntoView({
+            behavior: 'smooth'
+          })} className="px-8 py-4 border-2 border-white text-white font-body font-semibold text-lg rounded-full hover:bg-white hover:text-electric-purple transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
               Saiba mais
             </button>
             <button className="px-8 py-4 bg-electric-purple text-white font-body font-semibold text-lg rounded-full hover:bg-lilac transition-all duration-300 transform hover:scale-105 hover:shadow-xl border-2 border-electric-purple">
@@ -74,8 +58,6 @@ const HeroSection = () => {
           <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse" />
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
