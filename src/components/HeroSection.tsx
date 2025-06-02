@@ -4,8 +4,22 @@ import React from 'react';
 const HeroSection = () => {
   return (
     <section id="home" className="relative h-screen overflow-hidden">
-      {/* Background Image */}
+      {/* Background Video */}
       <div className="absolute inset-0">
+        <video 
+          className="absolute inset-0 w-full h-full object-cover"
+          autoPlay
+          loop
+          muted
+          playsInline
+          poster="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1920&q=80"
+        >
+          {/* Placeholder for video source - add your video file here */}
+          <source src="" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        
+        {/* Fallback Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat" 
           style={{
