@@ -4,8 +4,8 @@ import Header from '../components/Header';
 import HeroSection from '../components/HeroSection';
 import AboutSection from '../components/AboutSection';
 import GallerySection from '../components/GallerySection';
-import ScheduleSection from '../components/ScheduleSection';
 import SponsorsSection from '../components/SponsorsSection';
+import ScheduleSection from '../components/ScheduleSection';
 import ChecklistSection from '../components/ChecklistSection';
 import Footer from '../components/Footer';
 
@@ -16,8 +16,8 @@ const Index = () => {
       <HeroSection />
       <AboutSection />
       <GallerySection />
-      <ScheduleSection />
       <SponsorsSection />
+      <ScheduleSection />
       <ChecklistSection />
       <Footer />
     </div>
