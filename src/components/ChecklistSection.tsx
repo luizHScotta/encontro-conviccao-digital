@@ -13,7 +13,6 @@ const ChecklistSection = () => {
     'Chinelo ou sandália',
     'Protetor solar',
     'Repelente de insetos',
-    'Lanterna ou luz de cabeça',
     'Saco de dormir ou cobertor',
     'Travesseiro ou almofada inflável',
     'Garrafinha de água',
@@ -22,7 +21,6 @@ const ChecklistSection = () => {
     'Roupas de banho (se houver atividades aquáticas)',
     'Calçado fechado para trilhas',
     'Mochila ou bolsa para passeios',
-    'Documentos pessoais (RG/CPF)',
     'Dinheiro para emergências e lanche extra'
   ];
 
