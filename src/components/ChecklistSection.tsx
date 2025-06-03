@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Check } from 'lucide-react';
 
@@ -19,7 +18,6 @@ const ChecklistSection = () => {
     'Remédios pessoais',
     'Bíblia e material para anotações',
     'Roupas de banho (se houver atividades aquáticas)',
-    'Calçado fechado para trilhas',
     'Mochila ou bolsa para passeios',
     'Dinheiro para emergências e lanche extra'
   ];
