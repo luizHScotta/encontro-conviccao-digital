@@ -48,58 +48,58 @@ const Countdown = ({ targetDate }: CountdownProps) => {
   }, [targetDate]);
 
   return (
-    <div className="bg-gradient-to-r from-electric-purple to-lilac p-8 rounded-2xl shadow-xl mb-12">
+    <div className="bg-white rounded-2xl shadow-xl mb-12 p-8 border-4 border-electric-purple">
       <div className="text-center mb-6">
-        <h3 className="font-display font-bold text-white text-2xl md:text-3xl mb-2">
+        <h3 className="font-display font-bold text-electric-purple text-2xl md:text-3xl mb-2">
           CONTAGEM REGRESSIVA
         </h3>
-        <p className="text-white/90 font-body text-lg">
+        <p className="text-gray-600 font-body text-lg">
           Para o Retiro Encontro & Convicção 2026
         </p>
       </div>
       
       <div className="grid grid-cols-5 gap-4 max-w-2xl mx-auto">
-        <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4 text-center">
+        <div className="bg-electric-purple rounded-xl p-4 text-center shadow-lg">
           <div className="font-display font-black text-2xl md:text-3xl text-white">
             {timeLeft.months.toString().padStart(2, '0')}
           </div>
-          <div className="font-body text-white/90 text-sm uppercase tracking-wide">
+          <div className="font-body text-white text-sm uppercase tracking-wide">
             Meses
           </div>
         </div>
         
-        <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4 text-center">
+        <div className="bg-electric-purple rounded-xl p-4 text-center shadow-lg">
           <div className="font-display font-black text-2xl md:text-3xl text-white">
             {timeLeft.days.toString().padStart(2, '0')}
           </div>
-          <div className="font-body text-white/90 text-sm uppercase tracking-wide">
+          <div className="font-body text-white text-sm uppercase tracking-wide">
             Dias
           </div>
         </div>
         
-        <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4 text-center">
+        <div className="bg-electric-purple rounded-xl p-4 text-center shadow-lg">
           <div className="font-display font-black text-2xl md:text-3xl text-white">
             {timeLeft.hours.toString().padStart(2, '0')}
           </div>
-          <div className="font-body text-white/90 text-sm uppercase tracking-wide">
+          <div className="font-body text-white text-sm uppercase tracking-wide">
             Horas
           </div>
         </div>
         
-        <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4 text-center">
+        <div className="bg-electric-purple rounded-xl p-4 text-center shadow-lg">
           <div className="font-display font-black text-2xl md:text-3xl text-white">
             {timeLeft.minutes.toString().padStart(2, '0')}
           </div>
-          <div className="font-body text-white/90 text-sm uppercase tracking-wide">
+          <div className="font-body text-white text-sm uppercase tracking-wide">
             Minutos
           </div>
         </div>
         
-        <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4 text-center">
+        <div className="bg-electric-purple rounded-xl p-4 text-center shadow-lg">
           <div className="font-display font-black text-2xl md:text-3xl text-white">
             {timeLeft.seconds.toString().padStart(2, '0')}
           </div>
-          <div className="font-body text-white/90 text-sm uppercase tracking-wide">
+          <div className="font-body text-white text-sm uppercase tracking-wide">
             Segundos
           </div>
         </div>
