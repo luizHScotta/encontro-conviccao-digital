@@ -7,9 +7,9 @@ const AboutSection = () => {
     <section id="sobre" className="py-20 bg-gradient-to-br from-electric-purple to-lilac">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
+          <Countdown targetDate="2026-03-01T00:00:00" />
+          
           <div className="bg-white rounded-3xl p-8 md:p-12 shadow-2xl shadow-lilac/30">
-            <Countdown targetDate="2026-03-01T00:00:00" />
-            
             <h2 className="font-display font-black text-electric-purple text-[clamp(2.5rem,6vw,4rem)] text-center mb-8 leading-tight">
               POR QUE O
               <span className="block text-peach-gold">RETIRO EXISTE?</span>
