@@ -9,6 +9,7 @@ interface TimeLeft {
   days: number;
   hours: number;
   minutes: number;
+  seconds: number;
 }
 
 const Countdown = ({ targetDate }: CountdownProps) => {
@@ -16,6 +17,7 @@ const Countdown = ({ targetDate }: CountdownProps) => {
     days: 0,
     hours: 0,
     minutes: 0,
+    seconds: 0,
   });
 
   React.useEffect(() => {
@@ -26,11 +28,16 @@ const Countdown = ({ targetDate }: CountdownProps) => {
 
       if (difference > 0) {
         const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-        setTimeLeft({ days, hours, minutes });
+        const hours = Math.floor(
+          (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutes = Math.floor(
+          (difference % (1000 * 60 * 60)) / (1000 * 60)
+        );
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+        setTimeLeft({ days, hours, minutes, seconds });
       } else {
-        setTimeLeft({ days: 0, hours: 0, minutes: 0 });
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
       }
     };
 
@@ -49,8 +56,8 @@ const Countdown = ({ targetDate }: CountdownProps) => {
           Para o Retiro Encontro & Convicção 2026
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-xs md:max-w-lg mx-auto">
-        <div className="bg-electric-purple rounded-xl p-4 text-center shadow-lg min-w-[130px] flex flex-col items-center">
+      <div className="flex flex-col md:grid md:grid-cols-4 gap-4 max-w-xs md:max-w-2xl mx-auto">
+        <div className="bg-electric-purple rounded-xl p-4 text-center shadow-lg min-w-[140px] flex flex-col items-center">
           <div className="font-display font-black text-2xl md:text-3xl text-white">
             {timeLeft.days.toString().padStart(2, '0')}
           </div>
@@ -58,7 +65,7 @@ const Countdown = ({ targetDate }: CountdownProps) => {
             Dias
           </div>
         </div>
-        <div className="bg-electric-purple rounded-xl p-4 text-center shadow-lg min-w-[130px] flex flex-col items-center">
+        <div className="bg-electric-purple rounded-xl p-4 text-center shadow-lg min-w-[140px] flex flex-col items-center">
           <div className="font-display font-black text-2xl md:text-3xl text-white">
             {timeLeft.hours.toString().padStart(2, '0')}
           </div>
@@ -66,12 +73,20 @@ const Countdown = ({ targetDate }: CountdownProps) => {
             Horas
           </div>
         </div>
-        <div className="bg-electric-purple rounded-xl p-4 text-center shadow-lg min-w-[130px] flex flex-col items-center">
+        <div className="bg-electric-purple rounded-xl p-4 text-center shadow-lg min-w-[140px] flex flex-col items-center">
           <div className="font-display font-black text-2xl md:text-3xl text-white">
             {timeLeft.minutes.toString().padStart(2, '0')}
           </div>
           <div className="font-body text-white text-base md:text-sm uppercase tracking-wide">
             Minutos
+          </div>
+        </div>
+        <div className="bg-electric-purple rounded-xl p-4 text-center shadow-lg min-w-[140px] flex flex-col items-center">
+          <div className="font-display font-black text-2xl md:text-3xl text-white">
+            {timeLeft.seconds.toString().padStart(2, '0')}
+          </div>
+          <div className="font-body text-white text-base md:text-sm uppercase tracking-wide">
+            Segundos
           </div>
         </div>
       </div>
